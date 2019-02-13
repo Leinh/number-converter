@@ -92,6 +92,10 @@ if (c > 0) {
     else if (d == 1) {
         document.getElementById("toto").innerHTML = ("vous avez bien dit " + centaine[c] + "-" + unite[u + 9] + "?");
     }
+    //Le cas des dizaines justes:
+    else if (u==0) {
+        document.getElementById("toto").innerHTML = ("vous avez bien dit " + centaine[c] + " " + dizaine[d] + "?");
+    }
     // Les nombres qui finissent en "et un":
     else if ((d == 2 || d == 3 || d == 4 || d == 5 || d == 6) && u == 1) {
         document.getElementById("toto").innerHTML = ("vous avez bien dit " + centaine[c] + " " + dizaine[d] + " et " + unite[u] + "?");
@@ -114,6 +118,11 @@ if (c > 0) {
         document.getElementById("toto").innerHTML = ("vous avez bien dit " + centaine[c] + " " + dizaine[d] + "-" + unite[u] + "?");
     }
 
+}
+
+
+function reload(){
+    location.reload();
 }
 
 
